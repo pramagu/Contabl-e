@@ -1,0 +1,8 @@
+#producto {
+  background-color: aqua;
+  border-radius: 10px;
+}
+
+#producto * {
+  padding: 10px;
+}

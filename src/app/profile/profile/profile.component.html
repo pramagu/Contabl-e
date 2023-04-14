@@ -1,0 +1,13 @@
+<div class="card mt-4">
+  <div *ngIf="loading" class="spinner-border spinner-border-sm"></div>
+  <div>
+    <p>Username : {{ user.username }}</p>
+    <p>avatar : {{ user.avatar }}</p>
+    <p>fullName : {{ user.fullName }}</p>
+    <p>email : {{ user.email }}</p>
+    <p>Roles:</p>
+    <li *ngFor="let rol of user.roles">
+      {{ rol }}
+    </li>
+  </div>
+</div>

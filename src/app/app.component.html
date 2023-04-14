@@ -1,0 +1,38 @@
+﻿<!-- nav -->
+<nav class="navbar navbar-expand navbar-dark bg-dark px-3">
+  <div class="navbar-nav">
+    <a class="nav-item nav-link" routerLink="/" routerLinkActive="active"
+      >Home</a
+    >
+    <a class="nav-item nav-link" routerLink="/productos" *ngIf="user"
+      >Productos</a
+    >
+    <a class="nav-item nav-link" routerLink="/profile" *ngIf="user">Profile</a>
+    <button
+      class="btn btn-link nav-item nav-link"
+      (click)="logout()"
+      *ngIf="user"
+    >
+      Logout
+    </button>
+    <a class="nav-item nav-link" routerLink="/login" *ngIf="!user">Login</a>
+  </div>
+</nav>
+
+<!-- main app container -->
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
+
+<footer
+  class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top bg-dark"
+>
+  <p class="col-md-6 mb-0 text-light ps-3">&copy; Contabl-e</p>
+
+  <a
+    href="https://github.com/pramagu"
+    class="col-md-6 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-light text-decoration-none"
+  >
+    Manuel Pablo Ramos Aguilar
+  </a>
+</footer>
