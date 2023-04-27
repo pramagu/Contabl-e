@@ -1,1 +1,1 @@
-﻿export * from './productos.component';
+﻿export * from './historiales.component';

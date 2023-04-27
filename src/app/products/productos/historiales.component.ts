@@ -1,5 +1,5 @@
-import { Content } from './../../_interfaces/productoInterface';
-import { UserDto } from './../../_models/userDto';
+import { Content } from '../../_interfaces/historialInterface';
+import { UserDto } from '../../_models/userDto';
 import { Component } from '@angular/core';
 
 import { first } from 'rxjs/operators';
@@ -8,24 +8,24 @@ import { User } from '@app/_models';
 import { UserService } from '@app/_services';
 
 @Component({
-  selector: 'app-productos',
-  templateUrl: './productos.component.html',
-  styleUrls: ['./productos.component.css'],
+  selector: 'app-historiales',
+  templateUrl: './historiales.component.html',
+  styleUrls: ['./historiales.component.css'],
 })
-export class ProductosComponent {
+export class HistorialesComponent {
   loading = false;
-  listadoProductos: any;
+  listadoHistoriales: any;
   pagina: any;
 
   constructor(private userService: UserService) {}
 
   ngOnInit() {
     this.loading = true;
-    this.userService.getProductos().subscribe({
+    this.userService.getHistorial().subscribe({
       next: (data) => {
         this.loading = false;
         this.pagina = data.pageable.pageNumber;
-        this.listadoProductos = data.content;
+        this.listadoHistoriales = data.content;
       },
       error: (error) => {
         alert(error);

@@ -4,7 +4,9 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'https://aplicacionproductos.herokuapp.com',
+  apiUser: 'http://localhost:8080',
+  apiHistorial: 'http://localhost:8081',
+  apiOperaciones: 'http://localhost:8082',
 };
 
 /*

@@ -5,7 +5,10 @@
       >Home</a
     >
     <a class="nav-item nav-link" routerLink="/productos" *ngIf="user"
-      >Productos</a
+      >Historial</a
+    >
+    <a class="nav-item nav-link" routerLink="/finiquito" *ngIf="user"
+      >Calculadora Finiquito</a
     >
     <a class="nav-item nav-link" routerLink="/profile" *ngIf="user">Profile</a>
     <button
@@ -16,6 +19,9 @@
       Logout
     </button>
     <a class="nav-item nav-link" routerLink="/login" *ngIf="!user">Login</a>
+    <a class="nav-item nav-link" routerLink="/register" *ngIf="!user"
+      >Register</a
+    >
   </div>
 </nav>
 

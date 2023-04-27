@@ -1,4 +1,4 @@
-export interface ProductoInterface {
+export interface HistorialInterface {
   content: Content[];
   pageable: Pageable;
   last: boolean;
@@ -13,9 +13,10 @@ export interface ProductoInterface {
 }
 
 export interface Content {
-  nombre: string;
-  precio: number;
-  categoriaNombre: string;
+  nombreUsuario: string;
+  nombreOperacion: string;
+  fecha: Date;
+  resultado: number;
 }
 
 export interface Pageable {

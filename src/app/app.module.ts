@@ -1,13 +1,12 @@
-﻿import { ProductoComponent } from './products/productos/producto/producto/producto.component';
+﻿import { FiniquitoFormComponent } from './finiquito/finiquitoForm/finiquitoForm.component';
+import { RegisterComponent } from './register/register.component';
+import { HistorialComponent } from './products/productos/producto/producto/historial.component';
 import { ProfileComponent } from './profile/profile/profile.component';
-import { ProductosComponent } from './products/productos/productos.component';
+import { HistorialesComponent } from './products/productos/historiales.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-
-// used to create fake backend
-import { fakeBackendProvider } from './_helpers';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -27,9 +26,11 @@ import { LoginComponent } from './login';
     AppComponent,
     HomeComponent,
     LoginComponent,
-    ProductosComponent,
+    HistorialesComponent,
     ProfileComponent,
-    ProductoComponent,
+    HistorialComponent,
+    RegisterComponent,
+    FiniquitoFormComponent,
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },

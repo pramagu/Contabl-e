@@ -1,5 +1,7 @@
+import { FiniquitoFormComponent } from './finiquito/finiquitoForm/finiquitoForm.component';
+import { RegisterComponent } from './register/register.component';
 import { ProfileComponent } from './profile/profile/profile.component';
-import { ProductosComponent } from './products/productos/productos.component';
+import { HistorialesComponent } from './products/productos/historiales.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
@@ -12,12 +14,21 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   {
     path: 'productos',
-    component: ProductosComponent,
+    component: HistorialesComponent,
     canActivate: [AuthGuard],
   },
   {
     path: 'profile',
     component: ProfileComponent,
+    canActivate: [AuthGuard],
+  },
+  {
+    path: 'register',
+    component: RegisterComponent,
+  },
+  {
+    path: 'finiquito',
+    component: FiniquitoFormComponent,
     canActivate: [AuthGuard],
   },
 

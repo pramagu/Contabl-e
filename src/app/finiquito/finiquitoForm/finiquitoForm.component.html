@@ -1,0 +1,163 @@
+<div class="col-md-6 offset-md-3 mt-5">
+  <div class="card">
+    <h4 class="card-header py-3">Finiquito</h4>
+    <div class="card-body">
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+          <label class="form-label">Dias Trabajados (Último mes)</label>
+          <input
+            type="number"
+            formControlName="diasTrabajadosUltimoMes"
+            class="form-control"
+            [ngClass]="{
+              'is-invalid': submitted && f.diasTrabajadosUltimoMes.errors
+            }"
+          />
+          <div
+            *ngIf="submitted && f.diasTrabajadosUltimoMes.errors"
+            class="invalid-feedback"
+          >
+            <div *ngIf="f.diasTrabajadosUltimoMes.errors.required">
+              Se debe especificar este campo
+            </div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Fecha Inicio Contrato</label>
+          <input
+            type="date"
+            formControlName="inicioContrato"
+            class="form-control"
+            [ngClass]="{
+              'is-invalid': submitted && f.inicioContrato.errors
+            }"
+          />
+          <div
+            *ngIf="submitted && f.inicioContrato.errors"
+            class="invalid-feedback"
+          >
+            <div *ngIf="f.inicioContrato.errors.required">
+              Se debe especificar el campo
+            </div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Fecha Fin Contrato</label>
+          <input
+            type="date"
+            formControlName="finContrato"
+            class="form-control"
+            [ngClass]="{ 'is-invalid': submitted && f.finContrato.errors }"
+          />
+          <div
+            *ngIf="submitted && f.finContrato.errors"
+            class="invalid-feedback"
+          >
+            <div *ngIf="f.finContrato.errors.required">
+              Se debe especificar el campo
+            </div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label class="form-label"
+            >Paga Extra (Si es prorrateada poner 0 y añadir el prorrateo a
+            salarioMensual)</label
+          >
+          <input
+            type="number"
+            formControlName="pagaExtra"
+            class="form-control"
+            [ngClass]="{ 'is-invalid': submitted && f.pagaExtra.errors }"
+          />
+          <div *ngIf="submitted && f.pagaExtra.errors" class="invalid-feedback">
+            <div *ngIf="f.pagaExtra.errors.required">Se requiere un email</div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label class="form-label"
+            >fecha Última Paga (Si es Prorrateada pon cualquier fecha)</label
+          >
+          <input
+            type="date"
+            formControlName="fechaUltimaPaga"
+            class="form-control"
+            [ngClass]="{ 'is-invalid': submitted && f.fechaUltimaPaga.errors }"
+          />
+          <div
+            *ngIf="submitted && f.fechaUltimaPaga.errors"
+            class="invalid-feedback"
+          >
+            <div *ngIf="f.fechaUltimaPaga.errors.required">
+              Se debe especificar este campo
+            </div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Salario Mensual</label>
+          <input
+            type="number"
+            formControlName="salarioMensual"
+            class="form-control"
+            [ngClass]="{ 'is-invalid': submitted && f.salarioMensual.errors }"
+          />
+          <div
+            *ngIf="submitted && f.salarioMensual.errors"
+            class="invalid-feedback"
+          >
+            <div *ngIf="f.salarioMensual.errors.required">
+              Se debe especificar este campo
+            </div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Vacaciones Disfrutadas</label>
+          <input
+            type="number"
+            formControlName="vacacionesDisfrutadas"
+            class="form-control"
+            [ngClass]="{
+              'is-invalid': submitted && f.vacacionesDisfrutadas.errors
+            }"
+          />
+          <div
+            *ngIf="submitted && f.vacacionesDisfrutadas.errors"
+            class="invalid-feedback"
+          >
+            <div *ngIf="f.vacacionesDisfrutadas.errors.required">
+              Se debe especificar este campo
+            </div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Vacaciones Totales</label>
+          <input
+            type="number"
+            formControlName="vacacionesTotales"
+            class="form-control"
+            [ngClass]="{
+              'is-invalid': submitted && f.vacacionesTotales.errors
+            }"
+          />
+          <div
+            *ngIf="submitted && f.vacacionesTotales.errors"
+            class="invalid-feedback"
+          >
+            <div *ngIf="f.vacacionesTotales.errors.required">
+              Se debe especificar este campo
+            </div>
+          </div>
+        </div>
+        <button [disabled]="loading" class="btn btn-primary">
+          <span
+            *ngIf="loading"
+            class="spinner-border spinner-border-sm mr-1"
+          ></span>
+          Register
+        </button>
+        <div *ngIf="error" class="alert alert-danger mt-3 mb-0">
+          {{ error }}
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
