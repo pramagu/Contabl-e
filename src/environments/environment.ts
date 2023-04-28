@@ -4,9 +4,9 @@
 
 export const environment = {
   production: false,
-  apiUser: 'http://localhost:8080',
-  apiHistorial: 'http://localhost:8081',
-  apiOperaciones: 'http://localhost:8082',
+  apiUser: 'https://microservicioauth.heroku.app',
+  apiHistorial: 'https://microserviciohistorial.heroku.app',
+  apiOperaciones: 'https://microserviciooperacion.heroku.app',
 };
 
 /*
