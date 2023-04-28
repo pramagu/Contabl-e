@@ -1,11 +1,32 @@
-<h1 class="mt-3 mb-3">Historial</h1>
+<h1 class="mt-3 mb-3 text-center">Historial</h1>
 <div *ngIf="listadoHistoriales == ''">
   <h2 class="mt-3 text-danger">Actualmente usted no dispone de historial</h2>
 </div>
 <div *ngIf="listadoHistoriales != ''" class="mt-3">
-  <strong>Página Actual: {{ pagina + 1 }}</strong>
   <app-historial
     *ngFor="let historial of listadoHistoriales"
     [historial]="historial"
   ></app-historial>
+  <strong class=>Página Actual: {{ pagina + 1 }}</strong>
+  <div class="row mt-3">
+    <button *ngIf="(pagina - 1 >= 0)"
+      class="btn btn-primary col-md-1 ms-1"
+      (click)="onClick(pagina - 1)"
+    >
+      <
+    </button>
+    <button
+      *ngFor="let paginaBoton of listaPaginas"
+      class="btn btn-primary col-md-1 ms-1"
+      (click)="onClick(paginaBoton)"
+    >
+      {{ paginaBoton + 1 }}
+    </button>
+    <button *ngIf="(pagina + 1 < totalPaginas)"
+      class="btn btn-primary col-md-1 ms-1"
+      (click)="onClick(pagina + 1)"
+    >
+      >
+    </button>
+  </div>
 </div>

@@ -1,10 +1,8 @@
-﻿import { first, map, Observable } from 'rxjs';
+﻿import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { UserDto } from './../_models/userDto';
-import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-
 import { environment } from '@environments/environment';
-import { AuthenticationService } from './authentication.service';
 
 @Injectable({ providedIn: 'root' })
 export class UserService {
@@ -14,8 +12,14 @@ export class UserService {
     return this.http.get<UserDto>(`${environment.apiUser}/user/me`);
   }
 
-  public getHistorial(): Observable<any> {
-    return this.http.get<any>(`${environment.apiHistorial}/historial`);
+  public getHistorial(pagina: number): Observable<any> {
+    return this.http.get<any>(
+      `${environment.apiHistorial}/historial?page=${pagina}`
+    );
+  }
+
+  public deleteHistorial(id: number): Observable<any> {
+    return this.http.delete<any>(`${environment.apiHistorial}/historial/${id}`);
   }
 
   public finiquitoRequest(

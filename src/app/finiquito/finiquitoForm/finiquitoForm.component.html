@@ -1,7 +1,7 @@
-<div class="col-md-6 offset-md-3 mt-5">
+<div class="col-md-8 offset-md-2 mt-5">
   <div class="card">
     <h4 class="card-header py-3">Finiquito</h4>
-    <div class="card-body">
+    <div class="card-body py-5 px-4">
       <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
         <div class="mb-3">
           <label class="form-label">Dias Trabajados (Último mes)</label>
@@ -142,7 +142,10 @@
             *ngIf="submitted && f.vacacionesTotales.errors"
             class="invalid-feedback"
           >
-            <div *ngIf="f.vacacionesTotales.errors.required">
+            <div
+              *ngIf="f.vacacionesTotales.errors.required"
+              (onchange)="showError()"
+            >
               Se debe especificar este campo
             </div>
           </div>
@@ -152,7 +155,7 @@
             *ngIf="loading"
             class="spinner-border spinner-border-sm mr-1"
           ></span>
-          Register
+          Calcular Finiquito
         </button>
         <div *ngIf="error" class="alert alert-danger mt-3 mb-0">
           {{ error }}

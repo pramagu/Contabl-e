@@ -7,6 +7,7 @@ import {
 } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AuthenticationService, UserService } from '@app/_services';
+import { Notyf } from 'notyf';
 import { first } from 'rxjs';
 
 @Component({
@@ -19,12 +20,15 @@ export class FiniquitoFormComponent implements OnInit {
   loading = false;
   submitted = false;
   error = '';
+  notyf: any;
 
   constructor(
     private formBuilder: FormBuilder,
     private router: Router,
     private userService: UserService
-  ) {}
+  ) {
+    this.notyf = new Notyf();
+  }
 
   ngOnInit() {
     this.loginForm = this.formBuilder.group({
@@ -42,6 +46,12 @@ export class FiniquitoFormComponent implements OnInit {
   // convenience getter for easy access to form fields
   get f() {
     return this.loginForm.controls;
+  }
+
+  public showError(): void {
+    this.notyf.error(
+      'Existe algún campo incorrecto, por favor revise el formulario'
+    );
   }
 
   onSubmit() {
@@ -79,10 +89,12 @@ export class FiniquitoFormComponent implements OnInit {
         next: () => {
           // get return url from route parameters or default to '/'
           this.router.navigate(['/productos']);
+          this.notyf.success('Finiquito Calculado Correctamente');
         },
         error: (error) => {
           this.error = error;
           this.loading = false;
+          this.showError();
         },
       });
   }

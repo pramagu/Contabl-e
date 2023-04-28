@@ -13,6 +13,7 @@ export interface HistorialInterface {
 }
 
 export interface Content {
+  id: number;
   nombreUsuario: string;
   nombreOperacion: string;
   fecha: Date;

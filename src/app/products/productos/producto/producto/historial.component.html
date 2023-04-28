@@ -1,6 +1,49 @@
-<div id="producto">
-  <h4>Nombre Usuario: {{ historial.nombreUsuario }}</h4>
-  <p>Operación: {{ historial.nombreOperacion }}</p>
-  <p>Fecha: {{ historial.fecha }}</p>
-  <p>Resultado Operación: {{ historial.resultado }}</p>
+<div id="A{{ historial.id }}" class="container py-3">
+  <div class="card">
+    <div class="card-body">
+      <h4 class="card-title mb-4 row">
+        <span class="col col-md-11">Datos del finiquito</span>
+        <button
+          class="btn btn-danger col col-md-1"
+          (click)="eliminarHistorial(historial.id)"
+        >
+          X
+        </button>
+      </h4>
+      <div id="producto">
+        <div class="form-group row">
+          <label for="nombreUsuario" class="col-sm-4 col-form-label"
+            >Nombre Usuario:</label
+          >
+          <div class="col-sm-8">
+            <p class="form-control-plaintext">{{ historial.nombreUsuario }}</p>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="nombreOperacion" class="col-sm-4 col-form-label"
+            >Operación:</label
+          >
+          <div class="col-sm-8">
+            <p class="form-control-plaintext">
+              {{ historial.nombreOperacion }}
+            </p>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="fecha" class="col-sm-4 col-form-label">Fecha:</label>
+          <div class="col-sm-8">
+            <p class="form-control-plaintext">{{ historial.fecha }}</p>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="resultado" class="col-sm-4 col-form-label"
+            >Resultado Operación:</label
+          >
+          <div class="col-sm-8">
+            <p class="form-control-plaintext">{{ historial.resultado }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

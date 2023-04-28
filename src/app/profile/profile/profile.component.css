@@ -1,10 +1,58 @@
-.perfil {
-  background-color: aqua;
-  text-align: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
+.card {
+  background-color: #f8f9fa; /* color de fondo */
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-div{
-  border-radius: 30px;
+.perfil {
+  padding: 20px;
+}
+
+.card-title {
+  color: black; /* color de texto */
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.card-text {
+  color: #6c757d; /* color de texto secundario */
+  font-size: 16px;
+}
+
+.list-group-item {
+  background-color: #f8f9fa; /* color de fondo */
+  border: none;
+  color: #6c757d; /* color de texto */
+}
+
+.list-group-item:hover {
+  background-color: #e9ecef; /* color de fondo al pasar el mouse */
+}
+
+.spinner-border {
+  color: #f8f9fa; /* color del spinner */
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.spinner-border-sm {
+  height: 1rem;
+  width: 1rem;
+}
+
+/* Estilos para cuando se utiliza el modo oscuro */
+.navbar-dark .card {
+  background-color: #343a40; /* color de fondo */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.navbar-dark .card-title,
+.navbar-dark .card-text,
+.navbar-dark .list-group-item {
+  color: #f8f9fa; /* color de texto */
+}
+
+.navbar-dark .list-group-item:hover {
+  background-color: #3c424a; /* color de fondo al pasar el mouse */
 }

@@ -1,4 +1,5 @@
 ﻿import { FiniquitoFormComponent } from './finiquito/finiquitoForm/finiquitoForm.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RegisterComponent } from './register/register.component';
 import { HistorialComponent } from './products/productos/producto/producto/historial.component';
 import { ProfileComponent } from './profile/profile/profile.component';
@@ -18,6 +19,7 @@ import { LoginComponent } from './login';
 @NgModule({
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     ReactiveFormsModule,
     HttpClientModule,
     AppRoutingModule,

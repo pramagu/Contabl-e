@@ -1,8 +1,11 @@
-#producto {
+.card {
+  max-width: 600px;
+  margin: auto;
   background-color: aqua;
-  border-radius: 10px;
 }
-
-#producto * {
-  padding: 10px;
+.card-title {
+  text-align: center;
+}
+.form-control-plaintext {
+  font-weight: bold;
 }
