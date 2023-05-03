@@ -67,7 +67,7 @@ export class RegisterComponent implements OnInit {
           this.router.navigate([returnUrl]);
         },
         error: (error) => {
-          this.error = 'Ha ocurrido un Error';
+          this.error = 'El email o Usuario están ya registrados, use uno diferente';
           this.loading = false;
         },
       });
