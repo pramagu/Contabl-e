@@ -4,9 +4,9 @@
 
 export const environment = {
   production: false,
-  apiUser: 'https://microservicioauth.heroku.app',
-  apiHistorial: 'https://microserviciohistorial.heroku.app',
-  apiOperaciones: 'https://microserviciooperacion.heroku.app',
+  apiUser: 'https://microservicioauth.herokuapp.com',
+  apiHistorial: 'https://microserviciohistorial.herokuapp.com',
+  apiOperaciones: 'https://microserviciooperacion.herokuapp.com',
 };
 
 /*
