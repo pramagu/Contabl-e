@@ -10,20 +10,20 @@
   <strong class=>Página Actual: {{ pagina + 1 }}</strong>
   <div class="row mt-3">
     <button *ngIf="(pagina - 1 >= 0)"
-      class="btn btn-primary col-md-1 ms-1"
+      class="btn btn-primary col-1 ms-1"
       (click)="onClick(pagina - 1)"
     >
       <
     </button>
     <button
       *ngFor="let paginaBoton of listaPaginas"
-      class="btn btn-primary col-md-1 ms-1"
+      class="btn btn-primary col-1 ms-1"
       (click)="onClick(paginaBoton)"
     >
       {{ paginaBoton + 1 }}
     </button>
     <button *ngIf="(pagina + 1 < totalPaginas)"
-      class="btn btn-primary col-md-1 ms-1"
+      class="btn btn-primary col-1 ms-1"
       (click)="onClick(pagina + 1)"
     >
       >
