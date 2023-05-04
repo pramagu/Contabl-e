@@ -27,7 +27,7 @@
               "src/favicon.ico",
               "src/assets",
               "src/robots.txt",
-              "src/home/fotoHome.jpg"
+              "src/app/home/fotoHome.jpg"
             ],
             "styles": [
               "src/styles.less",
