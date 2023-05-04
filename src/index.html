@@ -24,6 +24,46 @@
   </head>
   <body>
     <app-root></app-root>
+    <footer
+      class="d-flex flex-wrap justify-content-between align-items-center py-3 mt-4 border-top bg-dark"
+    >
+      <p class="col col-md-3 mb-0 text-light ps-3">&copy; Contabl-e</p>
+
+      <a
+        href="https://github.com/pramagu"
+        class="col col-md-3 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-light text-decoration-none"
+      >
+        Manuel Pablo Ramos Aguilar
+      </a>
+      <div id="donate-button-container" class="col col-md-3">
+        <div id="donate-button"></div>
+        <script
+          src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js"
+          charset="UTF-8"
+        ></script>
+        <script>
+          PayPal.Donation.Button({
+            env: "production",
+            hosted_button_id: "AP5JY6N43Z2TN",
+            image: {
+              src: "https://www.paypalobjects.com/en_US/ES/i/btn/btn_donateCC_LG.gif",
+              alt: "Donate with PayPal button",
+              title: "PayPal - The safer, easier way to pay online!",
+            },
+          }).render("#donate-button");
+        </script>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.js"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.4.js"
+      integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
+      crossorigin="anonymous"
+    ></script>
     <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
   </body>
 </html>
