@@ -2,7 +2,7 @@ main{
   background-color: whitesmoke;
 }
 
-img{
+#donate-button > img{
   width: 30px;
   height: 30px;
 }
