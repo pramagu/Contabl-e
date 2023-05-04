@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /calcular-finiquito/
+Disallow: /enviar-datos/
+Disallow: /resultado-finiquito/
+Disallow: /privacidad/
+Disallow: /terminos-y-condiciones/
