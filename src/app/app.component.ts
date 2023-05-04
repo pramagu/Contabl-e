@@ -17,10 +17,11 @@ export class AppComponent {
   cookieDismiss: string = '¡Entendido!';
   cookieDeny: string = 'No quiero Cookies';
   cookieLinkText: string = 'Información sobre Cookies';
-  let cc = window as any;
+ 
 
   ngOnInit() {
-    this.cc.cookieconsent.initialise({
+ let cc = window as any;
+    cc.cookieconsent.initialise({
       palette: {
         popup: {
           background: '#3c8cde',
