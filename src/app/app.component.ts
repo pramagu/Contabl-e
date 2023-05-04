@@ -17,15 +17,10 @@ export class AppComponent {
   cookieDismiss: string = '¡Entendido!';
   cookieDeny: string = 'No quiero Cookies';
   cookieLinkText: string = 'Información sobre Cookies';
-let cc = window as any;
+  let cc = window as any;
 
   ngOnInit() {
-   
-  }
-
-  constructor(private authenticationService: AuthenticationService) {
-    this.authenticationService.user.subscribe((x) => (this.user = x));
- this.cc.cookieconsent.initialise({
+    this.cc.cookieconsent.initialise({
       palette: {
         popup: {
           background: '#3c8cde',
@@ -47,6 +42,10 @@ let cc = window as any;
         policy: 'Cookie Policy',
       },
     });
+  }
+
+  constructor(private authenticationService: AuthenticationService) {
+    this.authenticationService.user.subscribe((x) => (this.user = x));
   }
 
   logout() {
