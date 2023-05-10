@@ -24,7 +24,10 @@ export class JwtInterceptor implements HttpInterceptor {
     const isApiUser = request.url.startsWith(environment.apiUser);
     const isApiHistorial = request.url.startsWith(environment.apiHistorial);
     const isApiOperaciones = request.url.startsWith(environment.apiOperaciones);
-    if (isLoggedIn && (isApiUser || isApiHistorial || isApiOperaciones)) {
+    const isApiNotificaciones = request.url.startsWith(
+      environment.apiNotificaciones
+    );
+    if (isLoggedIn && (isApiUser || isApiHistorial || isApiOperaciones || isApiNotificaciones)) {
       request = request.clone({
         setHeaders: {
           Authorization: `Bearer ${user.token}`,
