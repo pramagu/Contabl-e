@@ -17,6 +17,12 @@ export class UserService {
       `${environment.apiHistorial}/historial?page=${pagina}`
     );
   }
+    
+    public getNotificaciones(): Observable<any> {
+    return this.http.get<any>(
+      `${environment.apiNotificaciones}/notificaciones`
+    );
+  }
 
   public deleteHistorial(id: number): Observable<any> {
     return this.http.delete<any>(`${environment.apiHistorial}/historial/${id}`);
